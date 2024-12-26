@@ -1,0 +1,34 @@
+desc: 放大镜的模糊查询
+pre_script:
+- 'print("执行前...")'
+steps:
+- 点击搜索图标:
+    keyword: option_click
+    type: id
+    object: com.zhao.myreader:id/iv_search
+- 输入关键字:
+    keyword: input_context
+    type: id
+    object: com.zhao.myreader:id/et_search_key
+    data: ''
+- 点击确定按钮:
+    keyword: option_click
+    type: id
+    object: com.zhao.myreader:id/tv_search_conform
+- 强制等待:
+    keyword: wait_sleep
+    data: '10'
+- assert:
+    keyword: assert_result
+    type: id
+    object: com.zhao.myreader:id/tv_book_name
+    data: SELECT book_name FROM book WHERE book_name like "";
+post_script:
+- 'print("执行后...")'
+#ddts:
+#-  username: hami
+#   password: '123456'
+#   desc: "正确的用户名和密码"
+#-  username: hami
+#   password: '1234567'
+#   desc: "错误的用户名和密码"

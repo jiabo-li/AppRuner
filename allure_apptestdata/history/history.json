@@ -1,0 +1,1 @@
+{"feb494aa752588beffc6c9bc23457cbb":{"statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"e8def7829e7be489","status":"broken","statusDetails":"_pytest.fixtures.FixtureLookupError: ('g_kaoyan_driver', <FixtureRequest for <Function test_execute_case[caseinfo0]>>)","time":{"start":1732443115727,"stop":1732443115727,"duration":0}}]}}
